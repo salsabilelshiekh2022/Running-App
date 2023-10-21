@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/welcome/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       navigatorKey: navigatorKey,
       onGenerateRoute: onGenerate,
+      home: const WelcomeView(),
     );
   }
 }
