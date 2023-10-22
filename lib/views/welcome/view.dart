@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
+import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/onBoarding/view.dart';
 import 'package:running_app/widgets/app_button.dart';
 import 'package:running_app/widgets/app_text.dart';
 
@@ -21,12 +23,12 @@ class WelcomeView extends StatelessWidget {
                   'assets/images/getStarted.png',
                   fit: BoxFit.cover,
                 ),
-                const Column(
+                Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 480,
                     ),
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: AppText(
                         text: 'Running App',
@@ -35,10 +37,10 @@ class WelcomeView extends StatelessWidget {
                         fontFamily: 'Quicksand',
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 12,
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 60),
                       child: AppText(
                         text:
@@ -49,11 +51,14 @@ class WelcomeView extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     AppButton(
                       title: 'Get Started',
+                      onTap: () {
+                        AppRouter.navigateTo(const OnboardingView());
+                      },
                     )
                   ],
                 )
