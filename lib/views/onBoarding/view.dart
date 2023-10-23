@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/login/view.dart';
 import 'package:running_app/widgets/app_button.dart';
 import 'package:running_app/widgets/app_text.dart';
 
@@ -52,18 +54,18 @@ class OnboardingView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(64),
               ),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                AppText(
+                const AppText(
                   text: 'Run',
                   textAlign: TextAlign.center,
                   fontSize: 21,
                   fontWeight: FontWeight.w700,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
-                AppText(
+                const AppText(
                   text:
                       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                   textAlign: TextAlign.center,
@@ -72,12 +74,15 @@ class OnboardingView extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   maxLines: 5,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 AppButton(
                   title: 'Next',
                   width: 150,
+                  onTap: () {
+                    AppRouter.navigateTo(const LoginView());
+                  },
                 ),
               ],
             ),
