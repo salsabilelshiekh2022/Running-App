@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/widgets/app_text.dart';
 
+import '../../widgets/information_box.dart';
+
 class HistoryView extends StatelessWidget {
   const HistoryView({super.key});
 
@@ -8,7 +10,7 @@ class HistoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: AppText(
+        title: const AppText(
           text: "History",
           fontSize: 16,
         ),
@@ -19,12 +21,16 @@ class HistoryView extends StatelessWidget {
         ],
       ),
       body: const SafeArea(
-          child: Column(
-        children: [
-          SizedBox(
-            height: 32,
-          ),
-        ],
+          child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 32,
+            ),
+            InformationBox(),
+          ],
+        ),
       )),
     );
   }
