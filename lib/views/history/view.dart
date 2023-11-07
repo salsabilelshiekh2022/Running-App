@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/widgets/app_text.dart';
 
+import '../../widgets/history_box.dart';
 import '../../widgets/information_box.dart';
 
 class HistoryView extends StatelessWidget {
@@ -16,19 +17,33 @@ class HistoryView extends StatelessWidget {
         ),
         leading: Image.asset('assets/images/arrowLeft.png'),
         actions: [
-          Image.asset('assets/images/directNotification.png'),
-          Image.asset('assets/images/smsNotification.png'),
+          Row(
+            children: [
+              Image.asset('assets/images/directNotification.png'),
+              const SizedBox(
+                width: 8,
+              ),
+              Image.asset('assets/images/smsNotification.png'),
+              const SizedBox(
+                width: 16,
+              )
+            ],
+          ),
         ],
       ),
-      body: const SafeArea(
+      body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
-            InformationBox(),
+            const InformationBox(),
+            const SizedBox(
+              height: 16,
+            ),
+            HistoryBox()
           ],
         ),
       )),

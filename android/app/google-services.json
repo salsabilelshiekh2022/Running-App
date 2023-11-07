@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159105612270",
+    "project_id": "run-app-a881b",
+    "storage_bucket": "run-app-a881b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159105612270:android:91fce5c79439718ee9f6ff",
+        "android_client_info": {
+          "package_name": "com.example.running_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ2WNdUO4AIbKIxQ90XGfAZ_QPn-6LJqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
