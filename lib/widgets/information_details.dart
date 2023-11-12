@@ -3,20 +3,20 @@ import 'package:running_app/widgets/app_text.dart';
 
 class InformationDetails extends StatelessWidget {
   const InformationDetails(
-      {super.key, required this.icon, required this.name, required this.value});
-  final IconData icon;
+      {super.key,
+      required this.name,
+      required this.value,
+      required this.image});
+
   final String name;
   final String value;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
-          icon,
-          size: 20,
-          color: Colors.white,
-        ),
+        Image.asset(image),
         const SizedBox(
           height: 4,
         ),

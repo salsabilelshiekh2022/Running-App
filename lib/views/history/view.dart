@@ -32,19 +32,29 @@ class HistoryView extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 32,
-            ),
-            const InformationBox(),
-            const SizedBox(
-              height: 16,
-            ),
-            HistoryBox()
-          ],
+          child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 32,
+              ),
+              const InformationBox(),
+              ListView.builder(
+                itemBuilder: (context, index) {
+                  return const Padding(
+                    padding: EdgeInsets.only(top: 16),
+                    child: HistoryBox(),
+                  );
+                },
+                itemCount: 10,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+              ),
+            ],
+          ),
         ),
       )),
     );

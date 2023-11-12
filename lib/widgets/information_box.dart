@@ -23,7 +23,9 @@ class InformationBox extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const InformationDetails(
-                icon: Icons.timer_outlined, name: "Time", value: "18.3 H"),
+                image: 'assets/images/timer.png',
+                name: "Time",
+                value: "18.3 H"),
             const SizedBox(
               width: 12,
             ),
@@ -36,7 +38,7 @@ class InformationBox extends StatelessWidget {
               width: 12,
             ),
             const InformationDetails(
-                icon: Icons.location_on_outlined,
+                image: 'assets/images/routing.png',
                 name: "Distance",
                 value: "48,7 KM"),
             const SizedBox(
@@ -51,7 +53,7 @@ class InformationBox extends StatelessWidget {
               width: 12,
             ),
             const InformationDetails(
-                icon: Icons.favorite_outline_rounded,
+                image: 'assets/images/heartCircle.png',
                 name: "Heart Beat",
                 value: "123 BPM"),
           ],
