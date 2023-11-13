@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
-import 'package:running_app/views/home/view.dart';
 
-import '../views/history/view.dart';
+import '../views/add_address/view.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({super.key});
@@ -24,7 +23,7 @@ class RunApp extends StatelessWidget {
       ),
       navigatorKey: navigatorKey,
       onGenerateRoute: onGenerate,
-      home: const HomeView(),
+      home: const AddAddress(),
     );
   }
 }
