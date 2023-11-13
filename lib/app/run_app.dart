@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/home/view.dart';
 
 import '../views/history/view.dart';
 
@@ -23,7 +24,7 @@ class RunApp extends StatelessWidget {
       ),
       navigatorKey: navigatorKey,
       onGenerateRoute: onGenerate,
-      home: const HistoryView(),
+      home: const HomeView(),
     );
   }
 }

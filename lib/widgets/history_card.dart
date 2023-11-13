@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'app_text.dart';
 
-class HistoryBox extends StatelessWidget {
-  const HistoryBox({super.key});
+class HistoryCard extends StatelessWidget {
+  const HistoryCard({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/widgets/app_text.dart';
 
-import '../../widgets/history_box.dart';
+import '../../widgets/history_card.dart';
 import '../../widgets/information_box.dart';
 
 class HistoryView extends StatelessWidget {
@@ -46,7 +46,7 @@ class HistoryView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return const Padding(
                     padding: EdgeInsets.only(top: 16),
-                    child: HistoryBox(),
+                    child: HistoryCard(),
                   );
                 },
                 itemCount: 10,
