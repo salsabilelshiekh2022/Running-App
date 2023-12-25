@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/history/view.dart';
+import 'package:running_app/views/new_wallet.dart/view.dart';
 import 'package:running_app/views/verify_email/view.dart';
 
 import '../views/add_address/view.dart';
+import '../views/home/view.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({super.key});
@@ -24,7 +27,7 @@ class RunApp extends StatelessWidget {
       ),
       navigatorKey: navigatorKey,
       onGenerateRoute: onGenerate,
-      home: const VerifyEmail(),
+      home: const NewWalletView(),
     );
   }
 }
