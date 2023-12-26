@@ -162,9 +162,9 @@ class RegisterView extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      InkWell(
+                      GestureDetector(
                         onTap: () {
-                          AppRouter.navigateAndPop(const LoginView());
+                          AppRouter.navigateTo(const LoginView());
                         },
                         child: const Text.rich(
                           TextSpan(

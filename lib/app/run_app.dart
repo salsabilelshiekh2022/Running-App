@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/store/view.dart';
 
 import '../core/functions/snack_bar.dart';
-import '../views/register/view.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({super.key});
@@ -25,7 +25,7 @@ class RunApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldKey,
       onGenerateRoute: onGenerate,
-      home: const RegisterView(),
+      home: const StoreView(),
     );
   }
 }
