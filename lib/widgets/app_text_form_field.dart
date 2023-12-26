@@ -35,50 +35,53 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadiusDirectional.circular(12),
-      child: TextFormField(
-        keyboardType: keyBoardType,
-        obscureText: secure,
-        enabled: enable,
-        onSaved: onSave,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 14,
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.w600,
-        ),
-        onFieldSubmitted: onSubmitted,
-        onChanged: onChange,
-        controller: controller,
-        focusNode: focusNode,
-        onEditingComplete: onEditingComplete,
-        textInputAction: textInputAction,
-        validator: validator,
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: const TextStyle(
-            color: kWhiteColor,
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12), color: kBackgroundColor),
+        child: TextFormField(
+          keyboardType: keyBoardType,
+          obscureText: secure,
+          enabled: enable,
+          onSaved: onSave,
+          style: const TextStyle(
+            color: Colors.white,
             fontSize: 14,
             fontFamily: 'Lato',
             fontWeight: FontWeight.w600,
           ),
-          fillColor: kSecoundColor,
-          filled: true,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(4.0),
-            borderSide: const BorderSide(
-              color: Color(0xCC7B61FF),
+          onFieldSubmitted: onSubmitted,
+          onChanged: onChange,
+          controller: controller,
+          focusNode: focusNode,
+          onEditingComplete: onEditingComplete,
+          textInputAction: textInputAction,
+          validator: validator,
+          decoration: InputDecoration(
+            errorStyle: const TextStyle(color: kPrimaryColor),
+            hintText: hintText,
+            hintStyle: const TextStyle(
+              color: kWhiteColor,
+              fontSize: 14,
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.w600,
             ),
-          ),
-          enabledBorder: inputBorder(
-            const Color(0xCC7B61FF),
-          ),
-          focusedBorder: inputBorder(
-            const Color(0xCC7B61FF),
-          ),
-          errorBorder: inputBorder(Colors.red),
-          focusedErrorBorder: inputBorder(Colors.red),
-          disabledBorder: inputBorder(
-            const Color(0xCC7B61FF),
+            fillColor: kSecoundColor,
+            filled: true,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(4.0),
+              borderSide: const BorderSide(
+                color: kPrimaryColor,
+              ),
+            ),
+            enabledBorder: inputBorder(
+              kPrimaryColor,
+            ),
+            focusedBorder: inputBorder(kPrimaryColor),
+            errorBorder: inputBorder(kPrimaryColor),
+            focusedErrorBorder: inputBorder(kPrimaryColor),
+            disabledBorder: inputBorder(
+              kPrimaryColor,
+            ),
           ),
         ),
       ),

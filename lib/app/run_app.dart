@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
-import 'package:running_app/views/history/view.dart';
-import 'package:running_app/views/new_wallet.dart/view.dart';
-import 'package:running_app/views/verify_email/view.dart';
 
-import '../views/add_address/view.dart';
-import '../views/home/view.dart';
+import '../core/functions/snack_bar.dart';
+import '../views/register/view.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({super.key});
@@ -26,8 +23,9 @@ class RunApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
       ),
       navigatorKey: navigatorKey,
+      scaffoldMessengerKey: scaffoldKey,
       onGenerateRoute: onGenerate,
-      home: const NewWalletView(),
+      home: const RegisterView(),
     );
   }
 }

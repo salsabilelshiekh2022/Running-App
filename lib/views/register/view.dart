@@ -17,13 +17,13 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: BlocProvider(
-        create: (context) => RegisterCubit(),
-        child: Builder(builder: (context) {
-          final cubit = RegisterCubit.of(context);
-          return SafeArea(
+    return BlocProvider(
+      create: (context) => RegisterCubit(),
+      child: Builder(builder: (context) {
+        final cubit = RegisterCubit.of(context);
+        return Scaffold(
+          appBar: AppBar(),
+          body: SafeArea(
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Padding(
@@ -96,10 +96,14 @@ class RegisterView extends StatelessWidget {
                       const SizedBox(
                         height: 24,
                       ),
-                      AppButton(
-                        title: 'Sign Up',
-                        onTap: () {
-                          cubit.registerWithEmailAndPassword();
+                      BlocBuilder<RegisterCubit, RegisterState>(
+                        builder: (context, state) {
+                          return AppButton(
+                            title: 'Sign Up',
+                            onTap: () {
+                              cubit.registerWithEmailAndPassword();
+                            },
+                          );
                         },
                       ),
                       const SizedBox(
@@ -191,9 +195,9 @@ class RegisterView extends StatelessWidget {
                 ),
               ),
             ),
-          );
-        }),
-      ),
+          ),
+        );
+      }),
     );
   }
 }
