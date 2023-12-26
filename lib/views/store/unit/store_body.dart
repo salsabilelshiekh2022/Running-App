@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:running_app/widgets/app_text.dart';
 
 import 'banners.dart';
+import 'brand_grid_view.dart';
 import 'category_list.dart';
 
 class StoreBody extends StatelessWidget {
@@ -18,6 +20,10 @@ class StoreBody extends StatelessWidget {
           children: [
             CategoriesList(),
             Banners(),
+            SizedBox(
+              height: 24,
+            ),
+            BrandsGridView()
           ],
         ),
       ),
