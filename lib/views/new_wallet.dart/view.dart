@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:running_app/widgets/app_text.dart';
 
 import 'units/new_wallet_body.dart';
