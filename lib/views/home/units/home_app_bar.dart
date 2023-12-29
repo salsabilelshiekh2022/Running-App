@@ -39,11 +39,19 @@ class HomeAppBar extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Image.asset('assets/images/directNotification.png'),
+        Image.asset(
+          'assets/images/directNotification.png',
+          width: 24,
+          height: 24,
+        ),
         const SizedBox(
           width: 16,
         ),
-        Image.asset('assets/images/smsNotification.png'),
+        Image.asset(
+          'assets/images/smsNotification.png',
+          width: 24,
+          height: 24,
+        ),
       ],
     );
   }

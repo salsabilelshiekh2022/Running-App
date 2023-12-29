@@ -12,10 +12,43 @@ class AddAddress extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const AppText(
-          text: 'Address',
-          fontSize: 18,
+          text: "Address",
+          fontSize: 16,
         ),
-        leading: const Icon(Icons.arrow_back_rounded),
+        leading: GestureDetector(
+          child: Row(
+            children: [
+              const SizedBox(
+                width: 20,
+                height: 20,
+              ),
+              Image.asset("assets/images/arrowLeft.png",
+                  width: 24, height: 24, fit: BoxFit.fill),
+            ],
+          ),
+        ),
+        actions: [
+          Row(
+            children: [
+              Image.asset(
+                'assets/images/directNotification.png',
+                width: 24,
+                height: 24,
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              Image.asset(
+                'assets/images/smsNotification.png',
+                width: 24,
+                height: 24,
+              ),
+              const SizedBox(
+                width: 16,
+              )
+            ],
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(

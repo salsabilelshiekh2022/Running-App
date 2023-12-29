@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/add_address/view.dart';
+import 'package:running_app/views/home/view.dart';
+import 'package:running_app/views/login/view.dart';
+import 'package:running_app/views/nav_bar.dart/view.dart';
+import 'package:running_app/views/new_wallet.dart/view.dart';
+import 'package:running_app/views/onBoarding/view.dart';
+import 'package:running_app/views/register/view.dart';
 import 'package:running_app/views/store/view.dart';
+import 'package:running_app/views/verify_email/view.dart';
+import 'package:running_app/views/welcome/view.dart';
 
 import '../core/functions/snack_bar.dart';
 
@@ -25,7 +34,7 @@ class RunApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldKey,
       onGenerateRoute: onGenerate,
-      home: const StoreView(),
+      home: const WelcomeView(),
     );
   }
 }

@@ -1,4 +1,4 @@
-part of 'login_cubit.dart';
+part of 'cubit.dart';
 
 @immutable
 sealed class LoginState {}

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../widgets/app_text.dart';
 
 class PopularItem extends StatelessWidget {
-  const PopularItem({super.key});
+  const PopularItem({super.key, required this.imageSrc, required this.title});
+  final String imageSrc;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class PopularItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("assets/images/shose.png"),
+          Image.asset(imageSrc),
           const SizedBox(
             height: 5,
           ),
@@ -41,8 +43,8 @@ class PopularItem extends StatelessWidget {
             color: Color(0xFFCDCDCD),
             fontSize: 10,
           ),
-          const AppText(
-            text: "Air Force 1 Low '07,",
+          AppText(
+            text: title,
             fontSize: 12,
           )
         ],

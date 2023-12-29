@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key});
-
+  const CategoryItem({super.key, required this.imageSrc, required this.title});
+  final String imageSrc;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,19 +13,19 @@ class CategoryItem extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(28),
           child: Image.network(
-            "https://i.pinimg.com/564x/86/25/0b/86250bf286c208a413cdade29d238482.jpg",
+            imageSrc,
             width: 56,
             height: 56,
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         const SizedBox(
           height: 4,
         ),
-        const Text(
-          'New',
+        Text(
+          title,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color(0xFFCDCDCD),
             fontSize: 10,
           ),

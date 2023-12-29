@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:running_app/core/router/router.dart';
-import 'package:running_app/views/home/view.dart';
+import 'package:running_app/views/verify_email/view.dart';
 
 import '../../core/functions/snack_bar.dart';
 
@@ -23,8 +23,8 @@ class RegisterCubit extends Cubit<RegisterState> {
           email: email!,
           password: password!,
         );
-        showSnackBar("Account create successfully!", Colors.green[600]!);
-        AppRouter.navigateAndPop(const HomeView());
+
+        AppRouter.navigateAndPop(const VerifyEmailView());
         //emit(RegisterSuccessState());
       } on FirebaseAuthException catch (e) {
         if (e.code == 'weak-password') {

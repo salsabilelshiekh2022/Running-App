@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/nav_bar.dart/view.dart';
 import 'package:running_app/widgets/app_button.dart';
 import 'package:running_app/widgets/app_text.dart';
 import 'package:running_app/widgets/main_button.dart';
 import 'package:running_app/widgets/otp_code.dart';
 
-class VerifyEmail extends StatelessWidget {
-  const VerifyEmail({super.key});
+import '../../core/functions/snack_bar.dart';
+
+class VerifyEmailView extends StatelessWidget {
+  const VerifyEmailView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,16 +59,20 @@ class VerifyEmail extends StatelessWidget {
               const SizedBox(
                 height: 80,
               ),
-              const AppButton(
+              AppButton(
                 title: 'Verify Email',
+                onTap: () {
+                  showSnackBar(
+                      "Account create successfully!", Colors.green[600]!);
+                  AppRouter.navigateAndPop(const NavBarView());
+                },
                 width: 325,
               ),
               const SizedBox(
                 height: 12,
               ),
-              MainButton(
-                onTap: () {},
-                title: 'Add Address',
+              const MainButton(
+                title: 'Open mail app',
               ),
             ],
           ),

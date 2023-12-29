@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:running_app/constants.dart';
 import 'package:running_app/core/functions/validator.dart';
 import 'package:running_app/core/router/router.dart';
-import 'package:running_app/views/login/login_cubit.dart';
+import 'package:running_app/views/login/cubit.dart';
 import 'package:running_app/views/register/view.dart';
 import 'package:running_app/widgets/app_button.dart';
 import 'package:running_app/widgets/app_text.dart';

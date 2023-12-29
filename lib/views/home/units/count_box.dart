@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 import '../../../widgets/app_text.dart';
 
 class CountBox extends StatelessWidget {
-  const CountBox({super.key, required this.count, required this.name});
+  const CountBox(
+      {super.key,
+      required this.count,
+      required this.name,
+      required this.imageSrc});
 
   final String count;
   final String name;
+  final String imageSrc;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +36,26 @@ class CountBox extends StatelessWidget {
           const SizedBox(
             height: 4,
           ),
-          AppText(
-            text: name,
-            fontSize: 12,
-            color: const Color(0xFFCDCDCD),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 16,
+                height: 16,
+                child: Image.asset(
+                  imageSrc,
+                  width: 16,
+                  height: 16,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              const SizedBox(width: 4),
+              AppText(
+                text: name,
+                fontSize: 12,
+                color: const Color(0xFFCDCDCD),
+              ),
+            ],
           ),
         ],
       ),

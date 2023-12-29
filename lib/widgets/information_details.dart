@@ -16,7 +16,12 @@ class InformationDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(image),
+        Image.asset(
+          image,
+          width: 20,
+          height: 20,
+          fit: BoxFit.fill,
+        ),
         const SizedBox(
           height: 4,
         ),

@@ -46,9 +46,19 @@ class HistoryCard extends StatelessWidget {
               ),
               Row(
                 children: [
+                  SizedBox(
+                    width: 8,
+                  ),
                   AppText(
                     text: '12.4 km',
                     color: Color(0xffcdcdcd),
+                  ),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Text(
+                    "•",
+                    style: TextStyle(color: Color(0xffD9D9D9)),
                   ),
                   SizedBox(
                     width: 12,

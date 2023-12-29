@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:running_app/core/router/router.dart';
+import 'package:running_app/views/history/view.dart';
 
 import '../../../widgets/app_text.dart';
 
@@ -17,7 +19,9 @@ class Header extends StatelessWidget {
             fontSize: 18,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              AppRouter.navigateTo(const HistoryView());
+            },
             child: const AppText(
               text: 'See All',
               fontSize: 14,

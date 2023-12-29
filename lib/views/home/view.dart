@@ -17,81 +17,88 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        child: Column(
+        child: Stack(
           children: [
-            Container(
-              width: double.infinity,
-              height: 446,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF7B61FF), Color(0xff4b4791)],
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(24),
-                  bottomRight: Radius.circular(24),
-                ),
-              ),
-              child: const SafeArea(
-                child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      HomeAppBar(),
-                      SizedBox(
-                        height: 26,
-                      ),
-                      HomeInformationBar(),
-                      SizedBox(
-                        height: 14,
-                      ),
-                      HomeProgressBar(),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      TodayInformationBox(),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Row(
+            Image.asset("assets/images/Background.png"),
+            Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 446,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Color(0xFF7B61FF), Color(0xff4b4791)],
+                    ),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(24),
+                      bottomRight: Radius.circular(24),
+                    ),
+                  ),
+                  child: const SafeArea(
+                    child: Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CountBox(
-                            count: '53,524',
-                            name: 'Steps',
-                          ),
+                          HomeAppBar(),
                           SizedBox(
-                            width: 16,
+                            height: 26,
                           ),
-                          CountBox(
-                            count: '1000',
-                            name: 'Earned Points',
+                          HomeInformationBar(),
+                          SizedBox(
+                            height: 14,
+                          ),
+                          HomeProgressBar(),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          TodayInformationBox(),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Row(
+                            children: [
+                              CountBox(
+                                count: '53,524',
+                                name: 'Steps',
+                                imageSrc: "assets/images/steps.png",
+                              ),
+                              SizedBox(
+                                width: 16,
+                              ),
+                              CountBox(
+                                count: '1000',
+                                name: 'Earned Points',
+                                imageSrc: "assets/images/coin.png",
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const ShareBox(),
-            const SizedBox(
-              height: 24,
-            ),
-            const Header(),
-            ListView.builder(
-              padding: const EdgeInsets.only(top: 0, left: 12, right: 12),
-              itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(top: 8.0),
-                  child: HistoryCard(),
-                );
-              },
-              itemCount: 3,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
+                const SizedBox(
+                  height: 16,
+                ),
+                const ShareBox(),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Header(),
+                ListView.builder(
+                  padding: const EdgeInsets.only(top: 0, left: 12, right: 12),
+                  itemBuilder: (context, index) {
+                    return const Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: HistoryCard(),
+                    );
+                  },
+                  itemCount: 3,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                ),
+              ],
             ),
           ],
         ),
