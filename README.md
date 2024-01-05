@@ -1,16 +1,24 @@
-# running_app
+# Running Application 🏃🏃
+- Flutter Run And Earn mobile app (UI)
+- with firebase Auth
 
-A new Flutter project.
+## ✨ Features
+- Easy to use
+- login and sign up user with firebase
 
-## Getting Started
+## 🔌 Packages
+-  firebase_auth
+-  firebase_core
+-  flutter_bloc
+-  flutter_svg
+-  persistent_bottom_nav_bar
+-  pin_code_fields
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 ScreenShots
+| Running                                        | Application                                 |
+| -----------------------------------------      | --------------------------------------------|
+| <img src="screen_shots/1.jpg" width="400">     | <img src="screen_shots/2.jpg" width="400">  |
+| <img src="screen_shots/3.jpg" width="400">     | <img src="screen_shots/4.jpg" width="400">  |
+| <img src="screen_shots/5.jpg" width="400">     | <img src="screen_shots/6.jpg" width="400">  |
+| <img src="screen_shots/7.jpg" width="400">     | <img src="screen_shots/8.jpg" width="400">  |
+| <img src="screen_shots/9.jpg" width="400">     | <img src="screen_shots/10.jpg" width="400"> |
