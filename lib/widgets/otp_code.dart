@@ -79,7 +79,7 @@ class _PinCodeState extends State<PinCode> {
             ],
           ),
           cursorColor: Colors.grey,
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             color: Colors.white,
             fontSize: 30,
             fontFamily: 'Quicksand',
